@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* MENU */
+.color_navbar {
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+}
+
+/* Cambiar la fuente y el color del texto en la navbar */
+.color_navbar .nav-link {
+    font-family: 'Righteous', sans-serif; /* Aplica la fuente 'Righteous' */
+    color: #ffffff; /* Color del texto */
+}
+
+.color_navbar .navbar-brand{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #191970;
+    text-decoration: none;
+}
+
+/* Opcional: Cambia el color de los enlaces en hover */
+.color_navbar .nav-link:hover {
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none 
+}
+
+.color_navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23191970' stroke-width='2' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+}
+
+/*INICIO*/
+
+.inicio{
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), 
+                url("data:image/jpeg;base64,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");
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center center; /* Centra la imagen */
+    width: 100%; /* Ajusta el ancho al 100% */
+    height: 890px; /* Mantén la altura */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-card {
+    background-color: transparent;
+    border: #191970;
+    display: block;
+  }
+  
+  .custom-card .card-body {
+    padding: 20px;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+    color: #fff; /* Cambia el color del texto si es necesario */
+  }
+
+  .card-title{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+  }
+
+  .card-text{
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .card-img-top {
+    margin-top: 40px;
+    border: 10px solid #191970;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%
+}
+
+.fa-brands {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 40px;
+    transition: .3s;
+}
+
+/*SOBRE MI*/
+.sobremi{
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #191970;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col
+{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #191970;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #191970;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #191970;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #191970;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/* SECCION S K I L L S */
+.skills{
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso{
+    background-color: #191970;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #191970;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/* Estas clases se agregaran dinamicamente mediante javascript */
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.skills .skill .photoshop{
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+@keyframes photoshop {
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+
+.skills .skill .wordpress{
+    width: 0%;
+    animation: 2s wordpress forwards;
+}
+@keyframes wordpress {
+    0%{width: 0%;}
+    100%{width: 81%;}
+}
+
+.skills .skill .drupal{
+    width: 0%;
+    animation: 2s drupal forwards;
+}
+@keyframes drupal {
+    0%{width: 0%;}
+    100%{width: 55%;}
+}
+
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.skills .skill .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
+}
+@keyframes trabajo {
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+    0%{width: 0%;}
+    100%{width: 99%;}
+}
+
+.skills .skill .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+
+.skills .skill .proyect{
+    width: 0%;
+    animation: 2s proyect forwards;
+}
+@keyframes proyect {
+    0%{width: 0%;}
+    100%{width: 94%;}
+}
+
+/* SECCION CURRICULUM */
+.curriculum{
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    color: #fff;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.curriculum .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.curriculum .fila .izquierda{
+    border-right: 2px solid #252A2E;
+}
+.curriculum .fila .derecha{
+    border-left: 2px solid #252A2E;
+}
+.curriculum .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252A2E;
+    position: relative;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item .casa{
+    color: #191970;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    display: block;
+    color: #191970;
+    margin-bottom: 10px;
+}
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-right: 2px solid #191970;
+    margin-right: 20px;
+}
+.curriculum .fila .der{
+    border-left: 2px solid #191970;
+    margin-left: 20px;
+}
+.curriculum .fila .item .conectori{
+    height: 2px;
+    background-color: #191970;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #191970;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.curriculum .fila .item .conectord{
+    height: 2px;
+    background-color: #191970;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #191970;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+/* SECCION PORTFOLIO */
+.portfolio{
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    color: #fff;
+    padding: 50px 20px;
+}
+.portfolio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.portfolio h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.portfolio .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portfolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portfolio .galeria .proyecto img{
+    width: 100%;
+    display: block;
+}
+.portfolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portfolio .galeria .proyecto .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.portfolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portfolio .galeria .proyecto .overlay:hover h3{
+    margin-bottom: 0px;
+}
+
+/* SECCION CONTACTO */
+.contacto{
+    background-image: url(img/contact_bg.png);
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    color: #fff;
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    color: #fff;
+    font-size: 18px;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #191970;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+.contacto .col img{
+    width: 100%;
+}
+.contacto .col .info{
+    position: absolute;
+    top: 40%;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #414345, #232526);
+    background: linear-gradient(to right, #414345, #232526);
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contacto .col .info ul{
+    list-style: none;
+}
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+.contacto .col .info ul li i{
+    color: #191970;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #191970;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background: #232526;
+        background: -webkit-linear-gradient(to right, #414345, #232526);
+        background: linear-gradient(to right, #414345, #232526);
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+
+    .portfolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portfolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portfolio .galeria .proyecto img{
+        width: 100%;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+}
